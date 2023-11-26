@@ -1,3 +1,6 @@
+# ascii from
+# https://gist.github.com/wynand1004/b5c521ea8392e9c6bfe101b025c39abe
+
 from random import randint
 
 rock = """  
