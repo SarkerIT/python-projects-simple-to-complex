@@ -12,7 +12,7 @@ else:
             print("NOT Leap year")
 
 
-# Alternate Versionn
+# Alternate Version
 
 if year % 4 == 0:
     if year % 100 == 0:
