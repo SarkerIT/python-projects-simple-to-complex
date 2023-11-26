@@ -1,10 +1,38 @@
 from random import randint
 
+rock = """  
+    _______
+---'   ____)  
+      (_____)  
+      (_____)  
+      (____)
+---.__(___)  
+"""
+
+paper = """  
+    _______
+---'   ____)____  
+          ______)  
+          _______)  
+         _______)
+---.__________)  
+"""
+
+scissors = """  
+    _______
+---'   ____)____  
+          ______)  
+       __________)  
+      (____)
+---.__(___)  
+"""
+game_ascii = [rock, paper, scissors]
 
 comp_choice = randint(0, 2)
 print(" Type: \n0 for Rock, \n1 for Paper, \n2 for Scissors\n")
-your_choice = int(input("Your choice: "))
-print(f"Computer's choice= {comp_choice}")
+your_choice = int(input("Insert your choice: "))
+print(f"Your choice: {game_ascii[your_choice]}")
+print(f"Computer's choice: {game_ascii[comp_choice]}")
 
 if your_choice == 0 and comp_choice == 1:
     print(f"\nYour choice is Rock and computer's choice is Paper.")
