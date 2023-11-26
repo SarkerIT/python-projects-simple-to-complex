@@ -7,20 +7,20 @@
 # print(my_list)
 
 ## Treasure Hiding (hide the treasure)
-line1 = [" ", " ", " "]
-line2 = [" ", " ", " "]
-line3 = [" ", " ", " "]
+sublist1 = [" ", " ", " "]
+sublist2 = [" ", " ", " "]
+sublist3 = [" ", " ", " "]
 
-map = [line1, line2, line3]
-print("Hiding treasure: Mark the spot")
+master_list = [sublist1, sublist2, sublist3]
+print("Hiding treasure: Mark the spot (example, a1 c3 etc)")
 position = input()
 letter = position[0].lower()
 
-abc = ["a", "b", "c"]
-letter_index = abc.index(letter)
+abc = ["a", "b", "c"]  # make this list to match the input
+letter_index = abc.index(letter)  # what is the index of the letter
 
 number_index = int(position[1]) - 1
-map[letter_index][number_index] = "X"
+master_list[letter_index][number_index] = "X"
 
 # print(letter_index, number_index)
-print(f"{line1}\n{line2}\n{line3}\n")
+print(f"{sublist1}\n{sublist2}\n{sublist3}\n")
