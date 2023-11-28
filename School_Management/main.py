@@ -34,21 +34,58 @@ class Professor(Campus_people):
         self.do_research = do_esearch
 
 
+class Registrar(Campus_people):
+    def __init__(self, first, last, year_started, enroll_student=None) -> None:
+        super().__init__(first, last, year_started)
+
+        if enroll_student is None:
+            self.enroll_student = []
+        else:
+            self.enroll_student = enroll_student
+
+    def add_student(self, student):
+        if student not in self.enroll_student:
+            self.enroll_student.append(student)
+
+    def remove_student(self, student):
+        if student in self.enroll_student:
+            self.enroll_student.remove(student)
+
+    def print_student(self):
+        for student in self.enroll_student:
+            student.full_name()
+
+
 ## DRIVER Code
 # for student
 print("\n")
-student_1 = Student("Rocky", "Pythony", 2020, "Computer engineering")
+student_1 = Student("Rocky", "Python", 2020, "Computer engineering")
 student_1.full_name()
 student_1.email()
 # student_1.major()  # will not work; not a method but an attribute
-# print(student_1.major()) # will not work not a method
+# print(student_1.major())  # will not work not a method
 
 print(student_1.major)
 
-# For Professor
+student_2 = Student("Monty", "Carlos", 2020, "Computer Science")
+
+
+## For Professor
 print("\n")
 prof_1 = Professor("John", "Smith", 2020, "Phychology", "False")
 
 prof_1.email()
 print(prof_1.subject_teach)
 print(prof_1.do_research)
+
+
+## for Registrar
+reg_1 = Registrar("Bill", "Willium", 1980, [student_1])
+
+# print enrolled students
+print("\n")
+reg_1.print_student()
+
+print("\n")
+reg_1.add_student(student_2)
+reg_1.print_student()
