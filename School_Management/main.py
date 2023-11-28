@@ -57,7 +57,7 @@ class Registrar(Campus_people):
 
 
 ## DRIVER Code
-# for student
+## for Student
 print("\n")
 student_1 = Student("Rocky", "Python", 2020, "Computer engineering")
 student_1.full_name()
@@ -79,7 +79,7 @@ print(prof_1.subject_teach)
 print(prof_1.do_research)
 
 
-## for Registrar
+## For Registrar
 reg_1 = Registrar("Bill", "Willium", 1980, [student_1])
 
 # print enrolled students
